@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "cStandard": "gnu11",
+            "intelliSenseMode": "linux-clang-x64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include"
+            ]
+        }
+    ],
+    "version": 4
+}
