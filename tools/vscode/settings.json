@@ -1,0 +1,62 @@
+{
+  "workbench.startupEditor": "none",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "editor.insertSpaces": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSave": "onFocusChange",
+  "cmake.showOptionsMovedNotification": false,
+  "git.openRepositoryInParentFolders": "always",
+  "explorer.compactFolders": false,
+  "editor.wordWrap": "on",
+  "extensions.ignoreRecommendations": true,
+  "C_Cpp.default.includePath": ["~/.capt/root/usr/include"],
+  "[c]": {
+    "editor.defaultFormatter": "keyhr.42-c-format"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "git.enableSmartCommit": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "update.mode": "none",
+  "C_Cpp.suggestSnippets": false,
+  "explorer.confirmPasteNative": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "makefile.configureOnOpen": false,
+  "debug.onTaskErrors": "showErrors",
+  "editor.minimap.enabled": false,
+  //"explorer.autoReveal": false,
+  "workbench.editor.enablePreview": true,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "editor.detectIndentation": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.associations": {
+    "*.c": "c",
+    "*.h": "c",
+    "*.cpp": "cpp",
+    "*.hpp": "cpp"
+  },
+  "[snippets]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}
