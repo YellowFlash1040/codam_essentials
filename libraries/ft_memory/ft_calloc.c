@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   string_array.h                                     :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovtune <akovtune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/07 14:19:50 by akovtune          #+#    #+#             */
-/*   Updated: 2025/03/07 14:41:50 by akovtune         ###   ########.fr       */
+/*   Created: 2024/10/11 15:30:31 by akovtune          #+#    #+#             */
+/*   Updated: 2024/10/15 19:23:52 by akovtune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRING_ARRAY_H
-# define STRING_ARRAY_H
+#include <stdlib.h>
+#include <limits.h>
 
-# include <stdlib.h>
-
-# define STRING_ARRAY_INIT_ERR 
-
-typedef struct string_array
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	**values;
-	int		length;
-} t_string_array;
+	char	*p;
+	int		bytes_count;
 
-t_string_array	*init_string_array(int size);
-void			destroy_string_array(t_string_array **string_array);
-
-#endif
+	if (!nmemb || !size)
+		return (malloc(0));
+	if (nmemb > INT_MAX / size)
+		return (NULL);
+	bytes_count = nmemb * size;
+	p = (char *)malloc(bytes_count);
+	if (!p)
+		return (NULL);
+	while (bytes_count--)
+		*p++ = '\0';
+	return (p - nmemb * size);
+}

@@ -1,6 +1,6 @@
 # Compiler and Flags
 CC			:= cc
-CFLAGS		:= -Wall -Wextra -Werror
+CFLAGS		:= -Wall -Wextra -Werror -g
 
 # Output Files
 NAME		:= ft_string.a
@@ -10,7 +10,12 @@ OBJ_DIR		:= obj
 
 # Files
 FILES		:= ft_string.c \
-				ft_string_2.c
+				ft_string_2.c \
+				ft_split.c \
+				ft_string_class.c
+
+#Headers
+HEADERS		:= ft_string.h
 
 # Sources, Objects
 OBJ     	:= $(addprefix $(OBJ_DIR)/, $(FILES:.c=.o))
@@ -29,7 +34,7 @@ $(NAME): $(OBJ)
 	@echo "$(GREEN)Compiled $@ successfully!$(RESET)"
 
 #Compile Object Files
-$(OBJ_DIR)/%.o: %.c
+$(OBJ_DIR)/%.o: %.c $(HEADERS)
 	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
