@@ -9,7 +9,7 @@ create_files() {
 
     # Create .h file
     if [ ! -f "$HEADER_FILE" ]; then
-        echo -e "#ifndef $HEADER_GUARD\n# define $HEADER_GUARD\n\n#endif" > "$HEADER_FILE"
+        echo -e "#ifndef $HEADER_GUARD\n# define $HEADER_GUARD\n\n\n\n#endif" > "$HEADER_FILE"
         echo "Created $HEADER_FILE ✅"
     else
         echo "$HEADER_FILE already exists, skipping."
