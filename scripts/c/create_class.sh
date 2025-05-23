@@ -3,9 +3,12 @@
 # Function to create files and add the functions
 create_files_with_functions() {
     NAME=$1
-    HEADER_FILE="${NAME}.h"
-    SOURCE_FILE="${NAME}.c"
+	FOLDER="${NAME}"
+    HEADER_FILE="${FOLDER}/${NAME}.h"
+    SOURCE_FILE="${FOLDER}/${NAME}.c"
     HEADER_GUARD=$(echo "$NAME" | tr '[:lower:]' '[:upper:]')_H
+
+  	mkdir -p "$FOLDER"
 
     # Create .h file if it doesn't exist
     if [ ! -f "$HEADER_FILE" ]; then
