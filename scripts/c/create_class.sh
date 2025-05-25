@@ -35,7 +35,7 @@ create_files_with_functions() {
 
     # Create .c file if it doesn't exist
     if [ ! -f "$SOURCE_FILE" ]; then
-        echo -e "#include \"$HEADER_FILE\"" > "$SOURCE_FILE"
+        echo -e "#include \"${NAME}.h\"" > "$SOURCE_FILE"
         echo -e "" >> "$SOURCE_FILE"
         echo -e "t_$NAME\t*init_$NAME(void)" >> "$SOURCE_FILE"
         echo -e "{" >> "$SOURCE_FILE"
