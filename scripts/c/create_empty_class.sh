@@ -3,9 +3,12 @@
 # Function to create files
 create_files() {
     NAME=$1
-    HEADER_FILE="${NAME}.h"
-    SOURCE_FILE="${NAME}.c"
+	FOLDER="${NAME}"
+    HEADER_FILE="${FOLDER}/${NAME}.h"
+    SOURCE_FILE="${FOLDER}/${NAME}.c"
     HEADER_GUARD=$(echo "$NAME" | tr '[:lower:]' '[:upper:]')_H
+
+	mkdir -p "$FOLDER"
 
     # Create .h file
     if [ ! -f "$HEADER_FILE" ]; then
@@ -17,7 +20,7 @@ create_files() {
 
     # Create .c file
     if [ ! -f "$SOURCE_FILE" ]; then
-        echo -e "#include \"$HEADER_FILE\"\n" > "$SOURCE_FILE"
+        echo -e "#include \"${NAME}.h\"\n" > "$SOURCE_FILE"
         echo "Created $SOURCE_FILE ✅"
     else
         echo "$SOURCE_FILE already exists, skipping."
