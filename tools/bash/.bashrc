@@ -25,16 +25,24 @@ alias gst='git stash'
 alias gstp='git stash pop'
 alias gstl='git stash list'
 alias gulc='git reset --soft HEAD~1'
+alias grb='git rebase -i'
+alias gplf='git fetch origin && git reset --hard origin/'
 alias ca='find -name "*.c" -exec sh -c "cc -Wall -Wextra -Werror \"\$0\"" {} \;'
 alias tre='source ~/.bashrc'
 alias l='clear'
 alias f='francinette'
+alias m='micro'
 alias cb='code ~/.bashrc'
 alias cz='code ~/.zshrc'
 alias capt="~/.capt/capt"
 alias checkf='nm -u'
 # alias micro='$HOME/.capt/root/usr/bin/micro'
 #see what's inside a stash: git stash show -p stash@{0}
+
+# command to synchronize remote "remote branches" with local "remote branches"
+# git fetch --prune
+# command to set up git to do it automatically during every git fetch
+# git config --global fetch.prune true
 
 gclo() {
     if [ "$#" -eq 1 ]; then
@@ -76,11 +84,15 @@ magick() {
 }
 
 eclass() {
-    "$HOME/codam/core/scripts/class/create_empty_class.sh" "$@"
+    "$HOME/codam/core/scripts/c/create_empty_class.sh" "$@"
 }
 
 class() {
-    "$HOME/codam/core/scripts/class/create_class.sh" "$@"
+    "$HOME/codam/core/scripts/c/create_class.sh" "$@"
+}
+
+cppclass() {
+    "$HOME/codam/core/scripts/cpp/class.sh" "$@"
 }
 
 snippet() {
