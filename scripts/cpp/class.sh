@@ -15,40 +15,48 @@ for class in "$@"; do
 
   # .hpp content
   cat > "$dir/$class.hpp" <<EOF
+#pragma once
+
 #ifndef $guard
 #define $guard
 
-class $class {
-private:
+class $class
+{
+  private:
     // Add member variables here
-public:
+  public:
     $class();
     $class(const $class &other);
     ~$class();
     $class &operator=(const $class &other);
 };
 
-#endif // $guard
+#endif
 EOF
 
   # .cpp content
   cat > "$dir/$class.cpp" <<EOF
 #include "$class.hpp"
 
-$class::$class() {
+$class::$class()
+{
     // Constructor
 }
 
-$class::$class(const $class &other) {
+$class::$class(const $class &other)
+{
     // Copy constructor
 }
 
-$class::~$class() {
+$class::~$class()
+{
     // Destructor
 }
 
-$class &${class}::operator=(const $class &other) {
-    if (this != &other) {
+$class &${class}::operator=(const $class &other)
+{
+    if (this != &other)
+	{
         // Assignment
     }
     return *this;
