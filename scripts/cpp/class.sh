@@ -18,7 +18,7 @@ for class in "$@"; do
 #pragma once
 
 #ifndef $guard
-#define $guard
+# define $guard
 
 class $class
 {
@@ -27,8 +27,8 @@ class $class
   public:
     $class();
     $class(const $class &other);
+	$class &operator=(const $class &other);
     ~$class();
-    $class &operator=(const $class &other);
 };
 
 #endif
@@ -40,7 +40,7 @@ EOF
 
 $class::$class()
 {
-    // Constructor
+    // Default constructor
 }
 
 $class::$class(const $class &other)
@@ -48,18 +48,18 @@ $class::$class(const $class &other)
     // Copy constructor
 }
 
-$class::~$class()
-{
-    // Destructor
-}
-
 $class &${class}::operator=(const $class &other)
 {
     if (this != &other)
 	{
-        // Assignment
+        // Copy assignment operator
     }
     return *this;
+}
+
+$class::~$class()
+{
+    // Destructor
 }
 EOF
 
