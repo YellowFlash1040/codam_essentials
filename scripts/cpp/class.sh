@@ -22,15 +22,20 @@ for class in "$@"; do
 
 class $class
 {
-  private:
-    //Properties
-	//Methods
-	void _copyFrom(const $class& other);
+// Orthodox canonical from
   public:
     $class();
     $class(const $class &other);
 	$class &operator=(const $class &other);
     ~$class();
+  private:
+	void _copyFrom(const $class& other);
+
+// Class implementation
+  private:
+    //Properties
+	//Methods
+  public:
 	//Constructors
 	//Operators overload
 	//Accessors
