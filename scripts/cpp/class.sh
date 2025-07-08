@@ -38,28 +38,37 @@ EOF
   cat > "$dir/$class.cpp" <<EOF
 #include "$class.hpp"
 
+// Default constructor
 $class::$class()
 {
-    // Default constructor
+    
 }
 
+void $class::_copyFrom(const $class& other)
+{
+    
+}
+
+// Copy constructor
 $class::$class(const $class &other)
 {
-    // Copy constructor
+    
 }
 
+// Copy assignment operator
 $class &${class}::operator=(const $class &other)
 {
     if (this != &other)
 	{
-        // Copy assignment operator
+        
     }
     return *this;
 }
 
+// Destructor
 $class::~$class()
 {
-    // Destructor
+    
 }
 EOF
 
