@@ -23,7 +23,9 @@ for class in "$@"; do
 class $class
 {
   private:
-    // Add member variables here
+    // Properties
+	// Methods
+	void _copyFrom(const $class& other);
   public:
     $class();
     $class(const $class &other);
