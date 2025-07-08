@@ -23,14 +23,18 @@ for class in "$@"; do
 class $class
 {
   private:
-    // Properties
-	// Methods
+    //Properties
+	//Methods
 	void _copyFrom(const $class& other);
   public:
     $class();
     $class(const $class &other);
 	$class &operator=(const $class &other);
     ~$class();
+	//Constructors
+	//Operators overload
+	//Accessors
+	//Methods
 };
 
 #endif
