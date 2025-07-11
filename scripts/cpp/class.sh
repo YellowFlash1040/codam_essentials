@@ -51,6 +51,8 @@ EOF
   cat > "$dir/$class.cpp" <<EOF
 #include "$class.hpp"
 
+// -----------------------ORTHODOX CANONICAL FORM-------------------------
+
 // Default constructor
 $class::$class()
 {
@@ -85,7 +87,7 @@ $class::$class($class&& other)
     // Clean up the traces (data in other has to set to null)
 }
 
-// Move assignment
+// Move assignment operator
 $class& $class::operator=($class&& other)
 {
 	if (this != &other)
@@ -102,6 +104,14 @@ $class::~$class()
 {
     // Free data (allocated with new)
 }
+
+// ---------------------------CONSTRUCTORS-----------------------------
+
+// ---------------------------OPERATORS OVERLOAD------------------------
+
+// ---------------------------ACCESSORS-----------------------------
+
+// ---------------------------METHODS-----------------------------
 EOF
 
   echo "Created $class ✅"
