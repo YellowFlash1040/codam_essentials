@@ -25,8 +25,10 @@ class $class
 // Orthodox canonical from
   public:
     $class();
-    $class(const $class &other);
-	$class &operator=(const $class &other);
+    $class(const $class& other);
+	$class &operator=(const $class& other);
+	$class($class&& other);
+	$class& operator=($class&& other);
     ~$class();
   private:
 	void _copyFrom(const $class& other);
@@ -63,7 +65,7 @@ void $class::_copyFrom(const $class& other)
 // Copy constructor
 $class::$class(const $class &other)
 {
-    
+    _copyFrom(other);
 }
 
 // Copy assignment operator
@@ -71,15 +73,34 @@ $class &${class}::operator=(const $class &other)
 {
     if (this != &other)
 	{
-        
+        _copyFrom(other);
     }
-    return *this;
+    return (*this);
+}
+
+// Move constructor
+$class::$class($class&& other)
+{
+	// Steal new data (from other)
+    // Clean up the traces (data in other has to set to null)
+}
+
+// Move assignment
+$class& $class::operator=($class&& other)
+{
+	if (this != &other)
+	{
+		// Free old data (inside this)
+		// Steal new data (from other)
+		// Clean up the traces (data in other has to set to null)
+	}
+	return (*this);
 }
 
 // Destructor
 $class::~$class()
 {
-    
+    // Free data (allocated with new)
 }
 EOF
 
