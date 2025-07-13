@@ -32,16 +32,18 @@ class $class
     ~$class();
   private:
 	void _copyFrom(const $class& other);
+	void _moveFrom($class&& other);
 
 // Class implementation
-  private:
-    //Properties
-	//Methods
   public:
 	//Constructors
 	//Operators overload
 	//Accessors
 	//Methods
+  private:
+    //Properties
+	//Methods
+  protected:
 };
 
 #endif
@@ -80,11 +82,16 @@ $class &${class}::operator=(const $class &other)
     return (*this);
 }
 
+void $class::_moveFrom($class&& other)
+{
+	// Steal new data (from other)
+	// Clean up the traces (data in other has to set to null)
+}
+
 // Move constructor
 $class::$class($class&& other)
 {
-	// Steal new data (from other)
-    // Clean up the traces (data in other has to set to null)
+	_moveFrom(std::move(other));
 }
 
 // Move assignment operator
@@ -93,8 +100,7 @@ $class& $class::operator=($class&& other)
 	if (this != &other)
 	{
 		// Free old data (inside this)
-		// Steal new data (from other)
-		// Clean up the traces (data in other has to set to null)
+		_moveFrom(std::move(other));
 	}
 	return (*this);
 }
