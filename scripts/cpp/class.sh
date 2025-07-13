@@ -20,6 +20,8 @@ for class in "$@"; do
 #ifndef $guard
 # define $guard
 
+#include <utility>
+
 class $class
 {
 // Orthodox canonical from
