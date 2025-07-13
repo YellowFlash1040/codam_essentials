@@ -38,13 +38,15 @@ class $class
 
 // Class implementation
   public:
-	//Constructors
-	//Operators overload
-	//Accessors
-	//Methods
+  //Constructors
+  //Operators overload
+  //Accessors
+  //Methods
+
   private:
-    //Properties
-	//Methods
+  //Properties
+  //Methods
+
   protected:
 };
 
