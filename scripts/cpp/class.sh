@@ -28,7 +28,7 @@ class $class
   public:
     $class();
     $class(const $class& other);
-	$class &operator=(const $class& other);
+	$class& operator=(const $class& other);
 	$class($class&& other);
 	$class& operator=($class&& other);
     ~$class();
