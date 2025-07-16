@@ -38,16 +38,17 @@ class $class
 
 // Class implementation
   public:
-  //Constructors
   //Operators overload
   //Accessors
+  //Methods
+
+  protected:
+  //Properties
   //Methods
 
   private:
   //Properties
   //Methods
-
-  protected:
 };
 
 #endif
@@ -114,8 +115,6 @@ $class::~$class()
 {
     // Free data (allocated with new)
 }
-
-// ---------------------------CONSTRUCTORS-----------------------------
 
 // ---------------------------OPERATORS OVERLOAD------------------------
 
