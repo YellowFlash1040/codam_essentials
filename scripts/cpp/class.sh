@@ -32,11 +32,8 @@ class $class
 	$class($class&& other) noexcept;
 	$class& operator=($class&& other) noexcept;
     ~$class();
-  private:
-	void _copyFrom(const $class& other);
-	void _moveFrom($class&& other) noexcept;
 
-// Class implementation
+// Class specific features
   public:
   //Accessors
   //Methods
@@ -62,46 +59,36 @@ EOF
 // Default constructor
 $class::$class()
 {
-    std::cout << "$class" << "has been constructed" << "\n";
+    std::cout << "$class" << " has been constructed" << "\n";
 }
 
 // Destructor
 $class::~$class()
 {
-    std::cout << "$class" << "has been destructed" << "\n";
-}
-
-void $class::_copyFrom(const $class& other)
-{
-    
+    std::cout << "$class" << " has been destructed" << "\n";
 }
 
 // Copy constructor
 $class::$class(const $class &other)
 {
-    _copyFrom(other);
+    std::cout << "$class" << " has been constructed (COPY)" << "\n";
 }
 
 // Copy assignment operator
 $class &${class}::operator=(const $class &other)
 {
     if (this != &other)
-	{
-        _copyFrom(other);
+    {
+        std::cout << "$class" << " has been constructed (COPY assignment)" << "\n";
+        // Copy data
     }
     return (*this);
-}
-
-void $class::_moveFrom($class&& other)
-{
-	// Steal new data (from other)
-	// Clean up the traces (data in other has to set to null)
 }
 
 // Move constructor
 $class::$class($class&& other)
 {
-	_moveFrom(std::move(other));
+    std::cout << "$class" << " has been constructed (MOVE)" << "\n";
 }
 
 // Move assignment operator
@@ -109,8 +96,11 @@ $class& $class::operator=($class&& other)
 {
 	if (this != &other)
 	{
+        std::cout << "$class" << " has been constructed (MOVE assignment)" << "\n";
 		// Free old data (inside this)
-		_moveFrom(std::move(other));
+        // Steal new data (from other)
+	    // Clean up the traces (data in other has to set to null)
+		// std::move(other);
 	}
 	return (*this);
 }
