@@ -24,21 +24,20 @@ for class in "$@"; do
 
 class $class
 {
-// Orthodox canonical from
+// Construction and destruction
   public:
     $class();
     $class(const $class& other);
 	$class& operator=(const $class& other);
-	$class($class&& other);
-	$class& operator=($class&& other);
+	$class($class&& other) noexcept;
+	$class& operator=($class&& other) noexcept;
     ~$class();
   private:
 	void _copyFrom(const $class& other);
-	void _moveFrom($class&& other);
+	void _moveFrom($class&& other) noexcept;
 
 // Class implementation
   public:
-  //Operators overload
   //Accessors
   //Methods
 
@@ -58,12 +57,18 @@ EOF
   cat > "$dir/$class.cpp" <<EOF
 #include "$class.hpp"
 
-// -----------------------ORTHODOX CANONICAL FORM-------------------------
+// -----------------------CONSTRUCTION AND DESTRUCTION-------------------------
 
 // Default constructor
 $class::$class()
 {
-    
+    std::cout << "$class" << "has been constructed" << "\n";
+}
+
+// Destructor
+$class::~$class()
+{
+    std::cout << "$class" << "has been destructed" << "\n";
 }
 
 void $class::_copyFrom(const $class& other)
@@ -109,14 +114,6 @@ $class& $class::operator=($class&& other)
 	}
 	return (*this);
 }
-
-// Destructor
-$class::~$class()
-{
-    // Free data (allocated with new)
-}
-
-// ---------------------------OPERATORS OVERLOAD------------------------
 
 // ---------------------------ACCESSORS-----------------------------
 

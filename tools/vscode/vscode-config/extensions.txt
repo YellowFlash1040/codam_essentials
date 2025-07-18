@@ -3,6 +3,7 @@ aaron-bond.better-comments
 alexanderdadukin.st235-wordscounter
 anseki.vscode-color
 christian-kohler.path-intellisense
+cs128.cs128-clang-tidy
 cschlosser.doxdocgen
 dalexhd.42-norminette
 dokca.42-ft-count-line
