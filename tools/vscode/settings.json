@@ -1,20 +1,33 @@
 {
   "workbench.startupEditor": "none",
-  "terminal.integrated.defaultProfile.linux": "bash",
-  "editor.insertSpaces": false,
-  "explorer.confirmDragAndDrop": false,
-  "files.autoSave": "onFocusChange",
-  "cmake.showOptionsMovedNotification": false,
-  "git.openRepositoryInParentFolders": "always",
-  "explorer.compactFolders": false,
-  "editor.wordWrap": "on",
   "extensions.ignoreRecommendations": true,
-  "C_Cpp.default.includePath": ["~/.capt/root/usr/include"],
-  "[c]": {
-    "editor.defaultFormatter": "keyhr.42-c-format"
+  "explorer.confirmDragAndDrop": false,
+  "workbench.colorTheme": "Default Dark+",
+  // "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "files.autoSave": "onFocusChange",
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
+  "explorer.compactFolders": false,
+  "git.openRepositoryInParentFolders": "always",
+  //"[cpp]": {
+  //  "editor.defaultFormatter": "ms-vscode.cpptools"
+  //},
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "[cpp]": {
-    "editor.defaultFormatter": "ms-vscode.cpptools"
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.associations": {
+    "*.c": "c",
+    "*.h": "c",
+    "*.cpp": "cpp",
+    "*.hpp": "cpp"
+  },
+  "[snippets]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "git.enableSmartCommit": true,
@@ -30,33 +43,39 @@
   "workbench.editor.enablePreview": true,
   "gitlens.currentLine.enabled": false,
   "gitlens.codeLens.enabled": false,
-  "editor.detectIndentation": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "chat.commandCenter.enabled": false,
+  "clang-format.executable": "/home/akovtune/.capt/root/usr/bin/clang-format",
+  //"clang-format.style": "Microsoft",
+  //"clang-format.style": "Google",
+  "clang-format.style": "file",
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
   },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "testMate.cpp.test.advancedExecutables": [
+    {
+      "pattern": "**/runtests",
+      "runTask": {
+        "before": ["build-tests"]
+      }
+    }
+  ],
+  //"testMate.cpp.test.executables": "**/runtests"
+  //"testMate.cpp.test.executables": "**/tests/**/*.test.cpp"
+  //"testMate.cpp.test.executables": "{build,Build,BUILD,out,Out,OUT}/**/*{test,Test,TEST}*"
+  "redhat.telemetry.enabled": false,
+  "yaml.schemas": {
+    "https://json.schemastore.org/clang-format.json": [".clang-format"]
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "files.associations": {
-    "*.c": "c",
-    "*.h": "c",
-    "*.cpp": "cpp",
-    "*.hpp": "cpp"
-  },
-  "[snippets]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  "C_Cpp.default.cStandard": "gnu11",
+  "C_Cpp.default.cppStandard": "c++11",
+  "C_Cpp.default.intelliSenseMode": "linux-clang-x64",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/**",
+    "/usr/include",
+    "~/.capt/root/usr/include"
+  ],
+  "editor.formatOnSave": true
 }
