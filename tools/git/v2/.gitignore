@@ -1,0 +1,11 @@
+*
+!*/
+.*
+!.gitignore
+!.gitkeep
+!Makefile
+!*.cpp
+!*.hpp
+!**/tests/googletest/**/*.a
+!**/tests/googletest/**/*.h
+!.clang-format
