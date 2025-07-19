@@ -10,10 +10,13 @@
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "problemMatcher": ["$gcc"],
       "detail": "Generated task for Makefile."
+    },
+    {
+      "label": "build-tests",
+      "type": "shell",
+      "command": "clear; make tests"
     }
   ]
 }
