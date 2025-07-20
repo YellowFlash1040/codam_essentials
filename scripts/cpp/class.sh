@@ -86,13 +86,13 @@ $class &${class}::operator=(const $class &other)
 }
 
 // Move constructor
-$class::$class($class&& other)
+$class::$class($class&& other) noexcept
 {
     std::cout << "$class" << " has been constructed (MOVE)" << "\n";
 }
 
 // Move assignment operator
-$class& $class::operator=($class&& other)
+$class& $class::operator=($class&& other) noexcept
 {
 	if (this != &other)
 	{
