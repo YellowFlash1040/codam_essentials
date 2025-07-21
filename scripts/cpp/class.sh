@@ -59,19 +59,11 @@ EOF
 // Default constructor
 $class::$class()
 {
-    std::cout << "$class" << " has been constructed" << "\n";
-}
-
-// Destructor
-$class::~$class()
-{
-    std::cout << "$class" << " has been destructed" << "\n";
 }
 
 // Copy constructor
 $class::$class(const $class &other)
 {
-    std::cout << "$class" << " has been constructed (COPY)" << "\n";
 }
 
 // Copy assignment operator
@@ -79,7 +71,6 @@ $class &${class}::operator=(const $class &other)
 {
     if (this != &other)
     {
-        std::cout << "$class" << " has been constructed (COPY assignment)" << "\n";
         // Copy data
     }
     return (*this);
@@ -88,7 +79,6 @@ $class &${class}::operator=(const $class &other)
 // Move constructor
 $class::$class($class&& other) noexcept
 {
-    std::cout << "$class" << " has been constructed (MOVE)" << "\n";
 }
 
 // Move assignment operator
@@ -96,13 +86,17 @@ $class& $class::operator=($class&& other) noexcept
 {
 	if (this != &other)
 	{
-        std::cout << "$class" << " has been constructed (MOVE assignment)" << "\n";
 		// Free old data (inside this)
         // Steal new data (from other)
 	    // Clean up the traces (data in other has to set to null)
 		// std::move(other);
 	}
 	return (*this);
+}
+
+// Destructor
+$class::~$class()
+{
 }
 
 // ---------------------------ACCESSORS-----------------------------
