@@ -58,5 +58,5 @@ const char* $exc::what() const noexcept
 }
 EOF
 
-  echo "Created custom exception ${exc}Exception ✅"
+  echo "Created custom exception ${exc} ✅"
 done
