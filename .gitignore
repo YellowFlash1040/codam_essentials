@@ -1,4 +1,11 @@
-projects/
-materials/
-exams/
-other/
+*
+!libraries/
+!libraries/**
+!notes/
+!notes/**
+!scripts/
+!scripts/**
+!tools/
+!tools/**
+!wallpapers/
+!wallpapers/**
