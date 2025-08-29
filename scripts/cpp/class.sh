@@ -35,6 +35,7 @@ class $class
 
 // Class specific features
   public:
+  //Constants
   //Accessors
   //Methods
 
