@@ -1,0 +1,34 @@
+Sockets:
+https://www.youtube.com/watch?v=bdIiTxtMaKA&ab_channel=JacobSorber
+https://www.youtube.com/watch?v=esXw4bdaZkc&ab_channel=JacobSorber
+https://www.youtube.com/watch?v=1jv428xKsRg&ab_channel=JacobSorber
+
+Multithreaded server:
+https://www.youtube.com/watch?v=Pg_4Jz8ZIH4&ab_channel=JacobSorber
+https://www.youtube.com/watch?v=FMNnusHqjpw&ab_channel=JacobSorber
+https://www.youtube.com/watch?v=P6Z5K8zmEmc
+
+Select:
+https://www.youtube.com/watch?v=Y6pFtgRdUts&ab_channel=JacobSorber
+
+Endianness:
+https://www.youtube.com/watch?v=OoHich9BPxg&ab_channel=JacobSorber
+
+
+Get IP from host name:
+https://www.youtube.com/watch?v=yN6EGfv5Dew&ab_channel=JacobSorber
+
+
+TCP vs UDP:
+https://www.youtube.com/watch?v=HpAdCgs9HCI&ab_channel=JacobSorber
+
+Timeout for sockets:
+https://www.youtube.com/watch?v=bA1VMjShQUk&ab_channel=JacobSorber
+
+
+UDP Sockets:
+https://www.youtube.com/watch?v=5PPfy-nUWIM&ab_channel=JacobSorber
+
+
+The whole networking playlist:
+https://www.youtube.com/playlist?list=PL9IEJIKnBJjH_zM5LnovnoaKlXML5qh17
