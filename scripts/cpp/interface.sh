@@ -24,10 +24,10 @@ class I$class
 {
   public:
     // Destructor
-    virtual ~I$class() {}
+    virtual ~I$class() = default;
 
     //Methods
-    // method() = 0;
+    // virtual void method() = 0;
 };
 
 #endif
