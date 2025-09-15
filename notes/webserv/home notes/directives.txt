@@ -1,0 +1,17 @@
+server (block) (?) - defines a virtual host (website)
+server_name (simple) (?) - identifies the hostname
+
+listen (simple) - specifies interface:port to bind
+error_page (simple) - maps HTTP error codes to files
+client_max_body_size (simple) - sets max allowed request body size
+
+location (block) - defines rules for a given route (URL prefix)
+limit_except (block) - restricts which HTTP methods are allowed
+return (simple) - simple HTTP redirection
+root (simple) - base directory for file lookups
+alias (simple)
+autoindex (simple) - enable/disable directory listing
+index (simple) - default file served in a directory
+upload_store (simple) - directory to save uploaded files
+cgi_pass (simple) - program to run for CGI scripts
+deny (simple) - deny access (used inside limit_except)
