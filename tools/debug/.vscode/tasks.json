@@ -2,21 +2,14 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Build",
+      "label": "build",
       "type": "shell",
-      "command": "clear; cd ${workspaceFolder} && make re",
-      "args": [],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "problemMatcher": ["$gcc"],
-      "detail": "Generated task for Makefile."
+      "command": "clear; cd ${workspaceFolder} && make re"
     },
     {
       "label": "build-tests",
       "type": "shell",
-      "command": "clear; make tests"
+      "command": "clear; cd ${workspaceFolder} && make tests"
     }
   ]
 }
